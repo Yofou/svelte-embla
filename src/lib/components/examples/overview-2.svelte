@@ -1,12 +1,5 @@
-{`<script>
-	import embla from "svelte-embla"
+<script>
+	 import { body } from "./overview-2";
 </script>
 
-<div class="embla" use:embla>
-	<div class="embla__container">
-		<div class="embla__slide">Slide 1</div>
-		<div class="embla__slide">Slide 2</div>
-		<div class="embla__slide">Slide 3</div>
-	</div>
-</div>
-`.trim()}
+{body}
