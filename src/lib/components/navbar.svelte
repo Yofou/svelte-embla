@@ -1,9 +1,11 @@
 <script lang="ts">
+	import { mode } from '$app/env';
 	import { page, session } from '$app/stores';
 	import Logo from '$lib/components/logo.svelte';
 
 	const changeTheme = async () => {
-		const theme = await fetch('http://localhost:3000/api/theme', { method: 'POST' })
+		const host = mode === "development" ? "http://localhost:3000" : "https://svelte-embla.vercel.app"
+		const theme = await fetch(`${host}/api/theme`, { method: 'POST' })
 			.then((res) => res.json())
 			.then((res) => res.theme as 'light' | 'dark');
 

@@ -1,7 +1,7 @@
 {
 	"name": "svelte-embla",
 	"version": "0.0.2",
-	"homepage": "",
+	"homepage": "https://svelte-embla.vercel.app",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Yofou/svelte-embla"
