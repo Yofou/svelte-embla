@@ -12,7 +12,9 @@ module.exports = {
 				embla: {
 					grey: 'rgb(202, 202, 202)',
 					white: 'rgb(230, 230, 230)',
-					gradient: 'linear-gradient(45deg, #ff9500, #ffcc00)'
+					gradient: 'linear-gradient(45deg, #ff9500, #ffcc00)',
+					lowContrast: "rgb(170, 170, 170)",
+					textBody: "rgb(222,222,222)"
 				}
 			}
 		}
@@ -24,6 +26,9 @@ module.exports = {
 					background: theme('colors.embla.gradient'),
 					'-webkit-background-clip': 'text',
 					'-webkit-text-fill-color': 'transparent'
+				},
+				'.svelte-bg': {
+					background: theme('colors.embla.gradient'),
 				}
 			});
 		})

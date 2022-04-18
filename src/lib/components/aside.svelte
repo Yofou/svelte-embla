@@ -26,10 +26,21 @@
 			class="flex flex-col gap-3 pl-9 py-[6px] border-l border-[rgb(25,25,25)]"
 		>
 			<a class:on-page={$page.url.pathname === '/examples'} href="/examples/">Overview</a>
-			<a class:on-page={$page.url.pathname === '/examples/basics'} href="/examples/basics">Basics</a>
-			<a class:on-page={$page.url.pathname === '/examples/navigation'} href="/examples/navigation">Navigation</a>
+			<a class:on-page={$page.url.pathname === '/examples/basics'} href="/examples/basics">Basics</a
+			>
+			<a class:on-page={$page.url.pathname === '/examples/navigation'} href="/examples/navigation"
+				>Navigation</a
+			>
 		</nav>
 	{/if}
+	<a href="https://www.npmjs.com/package/svelte-embla" class="flex gap-2 items-center !font-normal">
+		<img class="w-4 h-4" src="/npm.svg" alt="" />
+		Npm
+	</a>
+	<a href="https://github.com/Yofou/svelte-embla" class="flex gap-2 items-center !font-normal">
+		<img class="w-4 h-4" src="/github.svg" alt="" />
+		Github
+	</a>
 </aside>
 
 <style>
