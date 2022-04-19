@@ -1,7 +1,8 @@
 {
 	"name": "svelte-embla",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"homepage": "https://svelte-embla.vercel.app",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Yofou/svelte-embla"
@@ -49,6 +50,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@types/tailwindcss": "^3.0.10",
 		"embla-carousel": "^6.2.0"
 	}
 }

@@ -1,5 +1,8 @@
-const plugin = require('tailwindcss/plugin');
+const plugin = require("tailwindcss/plugin")
 
+/**
+ * @type {import('tailwindcss/tailwind-config').TailwindConfig}
+ */
 module.exports = {
 	content: ['./src/**/*.svelte'],
 	theme: {
@@ -34,4 +37,4 @@ module.exports = {
 			});
 		})
 	]
-};
+}
