@@ -14,7 +14,8 @@ module.exports = {
 					white: 'rgb(230, 230, 230)',
 					gradient: 'linear-gradient(45deg, #ff9500, #ffcc00)',
 					lowContrast: "rgb(170, 170, 170)",
-					textBody: "rgb(222,222,222)"
+					textBody: "rgb(222,222,222)",
+					carousel: "rgb(12, 12, 12)"
 				}
 			}
 		}

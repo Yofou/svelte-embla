@@ -12,7 +12,7 @@ export type EmbaOptionsActionType = EmblaOptionsType &
 const action: Action<HTMLElement, EmbaOptionsActionType> = (node, options = {}) => {
 	const plugins = options?.plugins ?? [];
 	const embla = EmblaCarousel(node, options, plugins);
-	if (options.store) options.store.set(embla);
+	options?.store?.set(embla);
 
 	const init = () => node.dispatchEvent(new CustomEvent('e-init', { detail: embla }));
 	const reinit = () => node.dispatchEvent(new CustomEvent('e-reinit'));
@@ -35,7 +35,7 @@ const action: Action<HTMLElement, EmbaOptionsActionType> = (node, options = {}) 
 	return {
 		destroy: () => {
 			embla.destroy();
-			options.store.set(undefined);
+			options?.store?.set(undefined);
 		}
 	};
 };
