@@ -1,6 +1,6 @@
 {
 	"name": "svelte-embla",
-	"version": "0.0.3",
+	"version": "0.0.5",
 	"homepage": "https://svelte-embla.vercel.app",
 	"license": "MIT",
 	"repository": {
@@ -25,6 +25,7 @@
 		"@sveltejs/adapter-vercel": "^1.0.0-next.47",
 		"@sveltejs/kit": "next",
 		"@types/cookie": "^0.5.0",
+		"@types/tailwindcss": "^3.0.10",
 		"@typescript-eslint/eslint-plugin": "^5.10.1",
 		"@typescript-eslint/parser": "^5.10.1",
 		"autoprefixer": "^10.4.4",
@@ -50,7 +51,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@types/tailwindcss": "^3.0.10",
 		"embla-carousel": "^6.2.0"
 	}
 }
