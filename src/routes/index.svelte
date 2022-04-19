@@ -1,7 +1,8 @@
 <script>
-	import CodeBlock from "$lib/components/code-block.svelte"
-	import Overview1 from "$lib/components/examples/overview-1.svelte"
-	import Overview2 from "$lib/components/examples/overview-2.svelte";
+	import CodeBlock from "$components/code-block.svelte"
+	import Overview1 from "$components/examples/overview-1.svelte"
+	import Overview2 from "$components/examples/overview-2.svelte";
+	import GradientHr from "$components/gradient-hr.svelte";
 
 	import 'highlight.js/styles/tokyo-night-dark.css'
 </script>
@@ -14,7 +15,7 @@
 	<small class="text-embla-lowContrast text-[0.875rem]">Home</small>
 
 	<h1 class="font-bold text-3xl text-embla-white">Getting Started</h1>
-	<div class="svelte-bg w-[50px] h-[3px]" />
+	<GradientHr />
 
 	<p class="text-embla-white leading-[1.65] font-normal">
 		Svelte Embla is a Svelte Action Wrapper for <a class="font-semibold text-svelte-gradient" href="https://www.embla-carousel.com/">Embla Carousel</a>

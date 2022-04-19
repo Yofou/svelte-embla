@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { mode } from '$app/env';
 	import { page, session } from '$app/stores';
-	import Logo from '$lib/components/logo.svelte';
+	import Logo from '$components/logo.svelte';
 
 	const changeTheme = async () => {
 		const host = mode === "development" ? "http://localhost:3000" : "https://svelte-embla.vercel.app"
@@ -25,7 +25,7 @@
 	<a class:on-page={$page.url.pathname.includes('/examples')} href="/examples">Examples</a>
 	<a href="https://www.embla-carousel.com/">Embla</a>
 	<button on:click={changeTheme}>
-		{#if $session.theme === 'light'}
+		{#if $session.theme === "light"}
 			<svg
 				fill="currentColor"
 				width="40px"

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Aside from '$lib/components/aside.svelte';
-	import Navbar from '$lib/components/navbar.svelte';
+	import Aside from '$components/aside.svelte';
+	import Navbar from '$components/navbar.svelte';
 </script>
 
 <Navbar />
