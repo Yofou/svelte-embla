@@ -1,6 +1,6 @@
-import adapter from "@sveltejs/adapter-vercel"
+import adapter from '@sveltejs/adapter-vercel';
 import preprocess from 'svelte-preprocess';
-import { resolve } from "path"
+import { resolve } from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -18,7 +18,7 @@ const config = {
 		vite: {
 			resolve: {
 				alias: {
-					"$components": resolve('./src/components/')
+					$components: resolve('./src/components/')
 				}
 			}
 		}

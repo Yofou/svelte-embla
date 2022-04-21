@@ -9,4 +9,4 @@ export const body = `<script>
 		<div class="embla__slide">Slide 3</div>
 	</div>
 </div>
-`.trim()
+`.trim();

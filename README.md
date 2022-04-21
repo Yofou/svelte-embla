@@ -1,4 +1,5 @@
 # Svelte Embla
+
 Svelte Embla is a Svelte Action Wrapper for [Embla Carousel](https://www.embla-carousel.com/)
 which allows you to easily integrate any kind of carousel to your heart disires
 using Embla Carousel in a Svelte project.
@@ -11,7 +12,7 @@ npm install svelte-embla
 
 ```svelte
 <script>
-	import embla from "svelte-embla"
+	import embla from 'svelte-embla';
 </script>
 
 <div class="embla" use:embla>

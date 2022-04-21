@@ -4,8 +4,8 @@
 		"paths": {
 			"$components": ["src/components"],
 			"$components/*": ["src/components/*"],
-			"$lib":["src/lib"],
-			"$lib/*":["src/lib/*"]
+			"$lib": ["src/lib"],
+			"$lib/*": ["src/lib/*"]
 		}
 	}
 }

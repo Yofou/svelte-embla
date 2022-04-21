@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	@apply font-roboto;
+}
+
+html {
+	@apply min-h-full bg-black;
+}
+
+body {
+	@apply grid grid-cols-[minmax(0,1000px)] justify-center grid-rows-[60px,minmax(calc(100vh-60px-24px),1fr)] gap-y-6 gap-x-10 h-full px-10;
+}
+
+@media (min-width: 768px) {
+	body {
+		@apply grid-cols-[minmax(0,270px),minmax(0,730px)];
+	}
+}
+
+body > div {
+	@apply contents;
+}
