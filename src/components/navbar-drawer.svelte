@@ -9,6 +9,7 @@
 	import { changeTheme } from "./changeTheme";
 	import { clickOutside } from "svelte-use-click-outside"
 	import { fade } from "svelte/transition";
+	import { page } from "$app/stores"
 
 	export let isDrawerOpen: boolean
 	const onToggleOpen = () => isDrawerOpen = !isDrawerOpen
@@ -16,6 +17,11 @@
 	let isMobile = false
 	const onWindowResize = () => {
 		isMobile = window.matchMedia("(max-width: 768px)").matches	
+	}
+
+	$: {
+		$page.url.pathname
+		isDrawerOpen = false
 	}
 
 	onMount( onWindowResize )
