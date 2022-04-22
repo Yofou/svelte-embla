@@ -1,10 +1,8 @@
 <script>
 	import CodeBlock from '$components/code-block.svelte';
-	import Overview1 from '$components/examples/overview-1.svelte';
-	import Overview2 from '$components/examples/overview-2.svelte';
+	import Overview1 from '$components/examples/overview-1';
+	import Overview2 from '$components/examples/overview-2';
 	import GradientHr from '$components/gradient-hr.svelte';
-
-	import 'highlight.js/styles/tokyo-night-dark.css';
 </script>
 
 <svelte:head>
@@ -19,7 +17,7 @@
 
 	<p class="text-embla-white leading-[1.65] font-normal">
 		Svelte Embla is a Svelte Action Wrapper for <a
-			class="font-semibold text-svelte-gradient"
+			class="font-semibold text-svelte-gradient selection:bg-inherit"
 			href="https://www.embla-carousel.com/">Embla Carousel</a
 		>
 		which allows you to easily integrate any kind of carousel to your heart disires using Embla Carousel

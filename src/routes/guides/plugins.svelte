@@ -1,4 +1,6 @@
 <script>
+	import CodeBlock from "$components/code-block.svelte";
+	import GuidePlugins from "$components/examples/guide-plugins";
 	import GradientHr from "$components/gradient-hr.svelte";
 </script>
 
@@ -19,6 +21,14 @@
 	<GradientHr />
 
 	<p class="text-embla-white">
-		TODO
+		Svelte-Embla is just an action wrapper for Embla-Carousel and because of that
+		there is no reason why you could not use Embla-Carousel 
+		<a class="text-svelte-gradient font-bold selection:bg-inherit" href="https://www.embla-carousel.com/plugins/">Plugins</a>. 
+		the only minor difference is where you place them, there is now a <span class="bg-gray-900 p-1 rounded-md inline">plugins</span> option on the action that functions
+		the same as the plugins parameter in Embla-Carousel.
 	</p>
+</section>
+
+<section class="mt-6 mb-12">
+	<CodeBlock lang="svelte" code={GuidePlugins} />
 </section>

@@ -10,7 +10,7 @@
 
 	<div class="flex gap-1 mt-2 mb-3 text-[.875rem] text-embla-lowContrast items-center">
 		<img src="/pen.svg" class="mb-[3px]" alt="" />
-		Edit code: <a class="ml-3 text-svelte-gradient font-semibold" {href}>Svelte</a>
+		Edit code: <a class="ml-3 text-svelte-gradient font-semibold selection:bg-inherit" {href}>Svelte</a>
 	</div>
 
 	<slot />

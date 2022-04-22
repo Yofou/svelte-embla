@@ -45,5 +45,10 @@
 <style>
 	li > a, p > a {
 		@apply text-svelte-gradient font-semibold;
+	
+	}
+
+	li > a::selection, p > a::selection {
+		@apply bg-inherit;
 	}
 </style>

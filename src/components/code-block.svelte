@@ -3,7 +3,7 @@
 	import HighlightSvelte from 'highlightjs-svelte';
 
 	export let lang: string;
-	export let code: any;
+	export let code: string;
 
 	let ref: HTMLElement;
 	onMount(async () => {
@@ -14,6 +14,4 @@
 	});
 </script>
 
-<pre class="max-w-[500px] !m-0 !py-0"><code class="language-{lang} rounded-[8px]" bind:this={ref}
-		><svelte:component this={code} /></code
-	></pre>
+<pre class="w-full !m-0 !py-0"><code class="language-{lang} rounded-[8px]" bind:this={ref}>{code}</code></pre>

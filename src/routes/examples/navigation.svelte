@@ -23,20 +23,20 @@
 
 	<p class="text-embla-white">
 		Add navigation to your carousels by utilizing the Embla Carousel <a
-			class="text-svelte-gradient font-bold"
+			class="text-svelte-gradient font-bold selection:bg-inherit"
 			href="https://www.embla-carousel.com/api/">API</a
 		>.
 	</p>
 </section>
 
 <section class="mt-6">
-	<ExampleBlock title="Arrow & Dots" href="">
+	<ExampleBlock title="Arrow & Dots" href="https://github.com/Yofou/svelte-embla/blob/main/src/components/examples/navigation-arrow-dots.svelte">
 		<NavigationArrowDots />
 	</ExampleBlock>
 </section>
 
 <section class="mt-6 mb-12">
-	<ExampleBlock title="Thumbnails" href="">
+	<ExampleBlock title="Thumbnails" href="https://github.com/Yofou/svelte-embla/blob/main/src/components/examples/navigation-thumbnails.svelte">
 		<NavigationThumbnails />
 	</ExampleBlock>
 </section>

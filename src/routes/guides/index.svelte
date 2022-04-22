@@ -30,7 +30,10 @@
 
 	<ul class="list-disc list-inside flex flex-col gap-4 ml-5">
 		<li>
-			<a href="/guides/actions">Actions</a>
+			<a href="/guides/options">Options</a>
+		</li>
+		<li>
+			<a href="/guides/events">Events</a>
 		</li>
 		<li>
 			<a href="/guides/stores">Stores</a>
@@ -44,5 +47,9 @@
 <style>
 	li > a, p > a {
 		@apply text-svelte-gradient font-semibold;
+	}
+
+	li > a::selection, p > a::selection {
+		@apply bg-inherit;
 	}
 </style>

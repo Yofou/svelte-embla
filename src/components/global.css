@@ -24,3 +24,11 @@ body {
 body > div {
 	@apply contents;
 }
+
+::selection {
+	@apply bg-svelte/90;
+}
+
+code *::selection {
+	@apply bg-blue-300/20;
+}

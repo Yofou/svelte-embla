@@ -12,7 +12,8 @@
 
 	<Accordion active={$page.url.pathname.includes('/guides')} title="Guides">
 		<a class:on-page={$page.url.pathname === '/guides'} href="/guides">Overview</a>
-		<a class:on-page={$page.url.pathname === '/guides/actions'} href="/guides/actions">Actions</a>
+		<a class:on-page={$page.url.pathname === '/guides/options'} href="/guides/options">Options</a>
+		<a class:on-page={$page.url.pathname === '/guides/events'} href="/guides/events">Events</a>
 		<a class:on-page={$page.url.pathname === '/guides/stores'} href="/guides/stores">Stores</a>
 		<a class:on-page={$page.url.pathname === '/guides/plugins'} href="/guides/plugins">Plugins</a>
 	</Accordion>
