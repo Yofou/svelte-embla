@@ -14,7 +14,7 @@
 	class="grid grid-cols-[max-content,1fr] md:grid-cols-[max-content,1fr,repeat(4,max-content)] items-center gap-7 col-span-1 md:col-span-2 text-white"
 >
 	<button on:click={toggleOpen} class="md:hidden">
-		<img src="/hamburger.svg" alt="">
+		<img class="w-6 h-6" src="/hamburger.svg" alt="">
 	</button>
 
 	<h1 class="flex text-2xl font-bold text-embla-white gap-2 items-center justify-self-center md:justify-self-start">
