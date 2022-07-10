@@ -23,7 +23,7 @@
 </script>
 
 <div class="bg-embla-carousel p-4 rounded-[.25rem] overflow-hidden">
-	<div class="overflow-hidden" use:embla={{ store: gallery }} on:e-select={onGallerySelect}>
+	<div class="overflow-hidden" use:embla={{ store: gallery }} on:embla-select={onGallerySelect}>
 		<div class="grid grid-flow-col auto-cols-[100%] grid-rows-[190px] gap-x-[10px]">
 			{#each images as src, index}
 				<div class="relative rounded-[.25rem] overflow-hidden">

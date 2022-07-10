@@ -24,7 +24,7 @@
 		Events in Embla are usually handled by the <span class="block">.on()</span>
 		function, however in Svelte-Embla I dispatch and destroy these events
 		to the element automatically with the sveltes action life-cycle hooks, meaning
-		you can assign any of embla event function in a normal svelte like manor, however due to conflicting
+		you can assign any of the embla event function in a normal svelte like manor, however due to conflicting
 		event names I have prefixed <span class="font-bold text-white">all</span> of the <a href="https://www.embla-carousel.com/api/events/#init">Embla Events</a> with <span class="block">e-</span>
 		so for like example the event select has now become <span class="block">e-select</span>. 
 	</p>

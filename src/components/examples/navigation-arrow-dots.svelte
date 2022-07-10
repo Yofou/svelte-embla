@@ -17,7 +17,7 @@
 </script>
 
 <div class="relative bg-embla-carousel p-4 overflow-hidden rounded-[.25rem]">
-	<div class="overflow-hidden" use:embla={{ store: carousel }} on:e-select={onSelect}>
+	<div class="overflow-hidden" use:embla={{ store: carousel }} on:embla-select={onSelect}>
 		<div class="grid grid-flow-col auto-cols-[100%] grid-rows-[190px] gap-x-[10px]">
 			{#each images as src, index}
 				<div class="relative overflow-hidden rounded-[.25rem]">
