@@ -2,20 +2,7 @@ import EmblaCarousel from 'embla-carousel';
 import type { Action } from 'svelte/action';
 import type { EmblaOptionsType, EmblaPluginType, EmblaCarouselType } from 'embla-carousel';
 import type { Writable } from 'svelte/store';
-import { paramCase } from 'param-case';
-import { arePluginsEqual } from './utils';
-
-export const emblaEventType = [
-	"init",
-	"pointerDown",
-	"pointerUp",
-	"scroll",
-	"select",
-	"settle",
-	"destroy",
-	"reInit",
-	"resize",
-] as const;
+import { arePluginsEqual, emblaEventType } from './utils';
 
 export type EmbaOptionsActionType = EmblaOptionsType &
 	Partial<{
@@ -32,7 +19,7 @@ const action: Action<HTMLElement, EmbaOptionsActionType> = (node, options = {}) 
 
 	emblaEventType.forEach((eventType) => {
 		const options: CustomEventInit<{ embla?: EmblaCarouselType }> = { detail: {} };
-		const eventName = `e-${paramCase(eventType)}`;
+		const eventName = `embla-${eventType}`;
 		if (eventType === 'init') options.detail.embla = embla;
 		embla.on(eventType, () => node.dispatchEvent(new CustomEvent(eventName, options)));
 	});
@@ -54,7 +41,7 @@ const action: Action<HTMLElement, EmbaOptionsActionType> = (node, options = {}) 
 			embla.reInit(cachedOptions, cachedOptions.plugins);
 			options?.store?.set(embla)
 		}
-	};
+	}
 };
 
 export default action;
