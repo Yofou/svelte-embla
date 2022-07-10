@@ -53,7 +53,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"embla-carousel": "^6.2.0",
+		"embla-carousel": "7.0.0-rc04",
 		"param-case": "^3.0.4"
 	}
 }
