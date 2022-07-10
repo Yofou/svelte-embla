@@ -2,6 +2,21 @@ import EmblaCarousel from 'embla-carousel';
 import type { Action } from 'svelte/action';
 import type { EmblaOptionsType, EmblaPluginType, EmblaCarouselType } from 'embla-carousel';
 import type { Writable } from 'svelte/store';
+import { paramCase } from "param-case"
+
+export const emblaEventType = [
+	'init',
+	'pointerDown',
+	'pointerUp',
+	'scroll',
+	'select',
+	'settle',
+	'destroy',
+	'reInit',
+	'resize'
+] as const;
+
+export type EmblaEventType = typeof emblaEventType[number];
 
 export type EmbaOptionsActionType = EmblaOptionsType &
 	Partial<{
@@ -14,23 +29,12 @@ const action: Action<HTMLElement, EmbaOptionsActionType> = (node, options = {}) 
 	const embla = EmblaCarousel(node, options, plugins);
 	options?.store?.set(embla);
 
-	const init = () => node.dispatchEvent(new CustomEvent('e-init', { detail: embla }));
-	const reinit = () => node.dispatchEvent(new CustomEvent('e-reinit'));
-	const destroy = () => node.dispatchEvent(new CustomEvent('e-destroy'));
-	const select = () => node.dispatchEvent(new CustomEvent('e-select'));
-	const scroll = () => node.dispatchEvent(new CustomEvent('e-scroll'));
-	const resize = () => node.dispatchEvent(new CustomEvent('e-resize'));
-	const pointerUp = () => node.dispatchEvent(new CustomEvent('e-pointer-up'));
-	const pointerDown = () => node.dispatchEvent(new CustomEvent('e-pointer-down'));
-
-	embla.on('init', init);
-	embla.on('reInit', reinit);
-	embla.on('destroy', destroy);
-	embla.on('select', select);
-	embla.on('scroll', scroll);
-	embla.on('resize', resize);
-	embla.on('pointerUp', pointerUp);
-	embla.on('pointerDown', pointerDown);
+	emblaEventType.forEach((eventType) => {
+		const options: CustomEventInit<{ embla?: EmblaCarouselType }> = { detail: {} }
+		const eventName = `e-${paramCase(eventType)}`
+		if (eventType === "init") options.detail.embla = embla
+		embla.on(eventType, () => node.dispatchEvent(new CustomEvent(eventName, options)));
+	});
 
 	return {
 		destroy: () => {
